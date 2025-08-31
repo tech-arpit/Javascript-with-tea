@@ -28,3 +28,4 @@ console.log(undefined < 0);   // false
 //--> It will check the datatypes ...
 
 console.log("2" === 2); // false.
+
