@@ -55,3 +55,56 @@ const myFunction = function() {
     console.log("Hello World");
 };
 console.log(typeof myFunction);   // "function"
+
+
+
+
+// -----------------------------
+// Stack vs Heap Memory in JS
+// -----------------------------
+
+// 🔹 Stack (used for Primitive types)
+// Each variable gets its own copy of the value.
+// Changing one does NOT affect the other.
+
+let siteName = "learnwithcode";
+
+// Copying the value into another variable (stack copy)
+let newSiteName = siteName;
+
+// Modify the copied variable
+newSiteName = "codeacademy";
+
+// Logs
+console.log(siteName);    // "learnwithcode" (original unchanged)
+console.log(newSiteName); // "codeacademy" (changed copy)
+
+
+// 🔹 Heap (used for Non-Primitive types → Objects, Arrays, Functions)
+// Variables store a *reference* to the object in memory.
+// Updating one reference affects the other.
+
+let studentOne = {
+    email: "student@mail.com",
+    id: "std123"
+};
+
+// studentTwo points to the SAME object in Heap.
+let studentTwo = studentOne;
+
+// Modify via studentTwo
+studentTwo.email = "newstudent@mail.com";
+
+// Logs
+console.log(studentOne.email); // "newstudent@mail.com" (also changed!)
+console.log(studentTwo.email); // "newstudent@mail.com"
+
+// ------------------------------------------
+// 📌 Quick Notes:
+// - Stack → Holds primitive values (String, Number, Boolean, null, undefined, Symbol, BigInt)
+//           Works with copies (safe, independent).
+//
+// - Heap → Holds non-primitive values (Objects, Arrays, Functions)
+//          Works with references (changes affect all references).
+// ------------------------------------------
+
