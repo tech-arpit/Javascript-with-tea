@@ -1,0 +1,217 @@
+// 1..
+// for(let i = 1 ; i<11;i++){
+//     console.log(i);
+// }
+
+// 2.
+// for(let i=0;i<21;i +=2){
+//     console.log(i);
+// }
+// 3.
+// for(let i = 10 ; i>0; i--){
+//      console.log(i);
+//     }
+// 4..
+// for(let i =0;i<5;i++)
+//     {
+//     console.log("YES");
+// }
+// 5..//Backticks create template literals, which allow string interpolation and multiline strings using ${} syntax....
+//Remember bacticks `` also for string interpolation ..
+// Embedding variable or expression directly inside a string ...
+
+// for(let i=1;i<11;i++){
+//     if(i%2===0){
+//         console.log(i , "even");
+//     }
+//     else{
+//         console.log(i,"odd");
+//     }
+// }
+// 6..
+// let num = Number(prompt("Enter a number :")); 
+//-----prompt always returns a string so we have to convert it into numbers ....
+// if(num>=0){
+//     console.log("Positive");
+
+// }
+// else{
+//     console.log("Negative");
+// }
+// 7..
+// let num = (prompt("Enter age :")); 
+
+// if(num ===null || num.trim()==="" || isNaN(num))
+// {
+//     console.log("Enter age in number ");
+
+// }
+// else{
+//     num = Number(num.trim());
+//     if(num>=18){
+//         console.log("Eligible to vote");
+
+//     }
+//     else{
+//         console.log("Not eligble to vote ");
+//     }
+// }
+
+//8.
+// for(let i = 1;i<=10;i++){
+//     console.log("5 x",i,"=",5*i);
+// }
+// 9..
+// let count =0;
+// for(let i =1;i<16;i++){
+//     if(i>8){
+//         count++;
+        
+//     }
+   
+// }
+//  console.log(count);
+// 10..
+//  let num = Number(prompt("Enter password :"));
+//   let correctPassword = 1234;
+//   if (num===correctPassword){
+//     console.log("Access ");
+//   }
+// else{
+//     console.log("Incorrect password ");
+// }
+//11..
+// let count =0;
+// for(let i=1;i<4;i++){
+// let num = Number(prompt("Enter password :"));
+//   let correctPassword = 1234;
+//   if (num===correctPassword){
+//     console.log("Access ");
+//     break;
+//   }
+
+// else if(count===3)
+// {
+//     break;
+//   }
+
+// else{
+//     // console.log("Incorrect password ");
+//     count++;
+// }
+// }
+// console.log("Account locked ");
+// 13..
+
+// for(let i= 1;i<51;i++){
+//     if(i%7===0){
+//         console.log(i);
+//     }
+
+// }
+// 14..
+// let sum =0;
+// for(let i=1;i<31;i++){
+//     if(i%2!==0){
+
+//         sum +=i;
+//     }
+   
+// }
+//  console.log(sum);
+//15..
+
+// let age = prompt("Enter age :");
+// if(age === null || age.trim() ===""||isNaN(age)){
+//     console.log("Invalid Input");
+// }
+// else{
+//     age = Number(age.trim());
+//     console.log("Number hai");
+
+// }
+
+// let hello = function(){
+//     console.log("Hello ");
+// }
+// hello();
+
+// function add(a , b)
+// {
+//     return a + b 
+// }
+// let answer = add(3,4);
+// console.log(answer);
+
+// function greeting(guest = "guest"){
+//     console.log(`Welcome ${guest}`);
+//     console.log(`Glad to see you here ${guest}`);
+// }
+// greeting("Ashish");
+
+
+// ...numbers is called rest opertaor ... it takes all the arguments passed and puts them in an array called numbers ..
+// function addunlimited(...numbers){
+//     let sum = 0;
+//     numbers.forEach(function(val){
+//         sum += val;
+//     });
+//     console.log(sum);
+// }
+// addunlimited(2, 3, 4);
+
+//    function addunlimited(...nums){
+//     let sum = 0;
+// for(let i = 0 ; i<nums.length; i++){
+//     sum += nums[i];
+    
+// }
+// console.log(sum);
+//    }
+//    addunlimited(2, 3, 4,5);
+
+//-----------------------------REDUCE METHOD SYNTAX
+// array.reduce(function(accumulator, currentValue) {
+//   return updatedAccumulator;
+// }, initialValue);
+
+// function addunlimited(...nums){
+//     let sum = nums.reduce(function(accumulator , currentValue){
+//         return accumulator + currentValue;
+//     },0);
+
+//     console.log(sum);
+
+// }
+// addunlimited(2,3,4, 5, 6);
+//########################################################################################----------------------------------
+// (function(){
+//     console.log("IIFE = IMMEDIATELY INVOKED FUNCTION EXPRESSION ");
+// })
+// ();
+//---------------------------------#######################################-----------------------
+// function parent(){
+//     let  a = 3;
+//     function child(){
+//         console.log(a);
+
+//     }
+//     child();
+// }
+// parent();
+
+// let obj = {
+//     name : "Alex",
+//     age : "23",
+//     city : "New York"
+
+// }
+// for(let key in obj){
+//     console.log(`${key} = ${obj[key]}`);
+// }
+
+// setTimeout(function(){
+//     console.log("Time's up !");
+// }) , 5000;
+
+ 
