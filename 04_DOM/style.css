@@ -3,16 +3,61 @@
     padding: 0;
     box-shadow: border-box;
 }
-body,html{
+body,html , main{
 
     height: 100%;
     width: 100%;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 50px;
+    background-color: lightseagreen;
+    margin: 40px;
+    height: 500px;
+    width: 600px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+    transition: transform 0.3s ease , box-shadow 0.3s ease;
+    color: white;
+    text-shadow: 2px,2px,6px rgba(0,0,0,0.6);
+
+
+
+
 }
 
 button{
-    margin: 20px;
-    border-radius: 50px;
+    width: 210px;
+    margin: 80px;
+    margin-top: 30px;
+    margin-left: 120px;
+    border-radius: 20px;
     background-color: blueviolet;
-    padding: 10px;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: 0, 20px,40px rgba(0,0,0,3) ;
+    
+    
+
+}
+h1 span{
+    margin: 6px, 0;
+}
+button:active{
+    scale: 0.9;
+}
+h1:hover{
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,3);
 
 }
