@@ -1,28 +1,31 @@
-var btn = document.querySelector('button');
-var main = document.querySelector('main');
+var btn = document.querySelector('button')
+var h2 = document.querySelector("h2")
+var inner = document.querySelector('.inner')
+var grow = 0 ;
 
-var arr = ['Stay hungry. Stay winning.','Progress over perfection.','Do it anyway.','Discipline creates freedom.','Small steps. Big results.','Build. Fail. Learn. Win.','Action changes everything.','Work hard. Stay humble.'];
 
-btn.addEventListener('click', function(){
-    var h1 = document.createElement('h1');
+btn.addEventListener('click',function(){
+     btn.style.pointerEvents = 'none'
 
-    var x = Math.random()*90;
-    var y = Math.random()*90;
-    var rot = Math.random()*360;
-    var scl = Math.random()*3;
-    var a = Math.floor(Math.random()*arr.length);
+     var num = 50 + (Math.floor(Math.random()*50))
+     
+
+  var zone =  setInterval(function(){
+     grow++;
+     h2.innerHTML = grow+ '%'
+     inner.style.width = grow+'%'
+
+    },num);
+
+    setTimeout(function(){
+        clearInterval(zone);
+        btn.innerHTML = 'Downloaded'
+        btn.style.opacity = 0.5
+        console.log(`Downloaded in ${num/10} seconds`)
+        
+    },num*100)
+
     
-
     
-    h1.innerHTML = arr[a];
-    
-    h1.style.position = "absolute"
-    h1.style.color = "white"
-    h1.style.left = x+ '%'
-    h1.style.top = y+ '%'
-    h1.style.rotate =  rot+ 'deg'
-    h1.style.scale = scl 
-
-    main.appendChild(h1);
-
 })
+

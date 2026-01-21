@@ -3,38 +3,79 @@
     padding: 0;
     box-shadow: border-box;
 }
-body,html{
-    background-color: black;
+html,body{
     height: 100%;
     width: 100%;
-    align-items: center;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    
+    width: 500px;
+    background-color: white;
+    
+    padding: 30px;
+    border-radius: 10px;
+
 
 
 }
-button{
-    height:50px;
-    width: 200px;
-    background-color: red;
-    color: white;
-    position: relative;
-    margin: 300px;
-    padding: 10px;
-    font-size: 23px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: transform 0.15s ease;
-   
+.outer{
+    height: 25px;
+    width: 100%;
+    background-color: gray;
+    border-radius: 50px;
+}
 
+.inner{
+    height: 100%;
+    width: 0%;
+    background-color: green;
+    border-radius: 50px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.bottom h2{
+    font-size: 40px; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bottom button{
+
+    font-size: 20px;
+    padding: 10px;
+    font-family: monospace;
+    border-radius: 10px;
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+.card p{
+    text-align: center;
+    margin: 5px 10px 20px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600px;
+
+}
+.card span{
+    color: royalblue;
+    font-weight: 600px;
 }
 button:active{
     transform: scale(0.95);
-    
-}
-h1{
-    font-size: small;
 }
 
