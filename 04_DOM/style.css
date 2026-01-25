@@ -7,58 +7,23 @@ html,body{
     height: 100%;
     width: 100%;
 }
-
-main{
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    padding:10px;
+.box{
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-.card{
-     width: 300px;
-     background-color: white;
-     display: flex;
-     align-items: center;
-     flex-direction: column;
-     border-radius: 20px;
-
-}
-
-.card img{
-    width: 150px;
-    height: 200px;
-    padding:10px;
-    border-radius: 50%;
-
-
-}
-.card h3{
-    padding: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content :space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: lightgray;
+    margin-top: 10px;
+    border-radius: 30px;
     font-size: 30px;
-     white-space: nowrap;
 
 }
-.card h4{
-    /* margin-bottom: 10px; */
+button{
+    padding: 15px;
     font-size: 20px;
-
-}
-.card p{
-    text-align: center;
-    padding: 10px;
-    /* margin-left: 5px; */
-    font-size: 15px;
-   
-    font-family:Arial, Helvetica, sans-serif;
-}
-.card:hover{
-    transform: scale(0.95);
-     background-color: lemonchiffon; 
+    font-weight: 200;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: royalblue;
+    
 }
