@@ -1,35 +1,103 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html, body {
     height: 100%;
     width: 100%;
-    background-color: black;
-}
-body{
-
-  /* filter: brightness(1.1) contrast(1.1); */
-
-
-background-image: url();
-
-    background-size: cover;  
- }
-:root{
-   --x: 400px;
-   --y: 400px;
+    overflow: hidden;
 }
 
-.box1{
-    height: 100%;
+/* Start Overlay */
+#startOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-   background: radial-gradient(
-  150px at var(--x) var(--y),
-  rgba(255,255,255,0.9),
-  rgba(26, 25, 25, 0.95)
-);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+#startBtn {
+    padding: 20px 40px;
+    font-size: 24px;
+    background: #e62429;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
 
+#startBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Video */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Spotlight */
+.spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        300px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        transparent 40%,
+        rgba(0, 0, 0, 0.95) 80%
+    );
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: multiply;
+}
+
+/* Controls */
+.controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+#soundBtn {
+    background: #e62429;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#soundBtn:hover {
+    background: #ff1e25;
+}
+
+#volumeSlider {
+    width: 100px;
+    cursor: pointer;
 }
