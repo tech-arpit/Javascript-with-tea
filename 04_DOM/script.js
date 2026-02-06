@@ -136,7 +136,7 @@ reels.forEach(function (elem) {
             <h3>${elem.caption}</h3>
           </div>
           <div class="right">
-            <div class="like">
+            <div id="${idx}" class="like">
               <h4 class="like-icon icon">${elem.isLiked?'<i class="love ri-heart-3-fill"></i>':'<i class="ri-heart-3-line"></i>'}</h4>
               <h6>${elem.likeCount}</h6>
             </div>
