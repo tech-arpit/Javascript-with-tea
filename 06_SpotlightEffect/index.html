@@ -3,28 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotlight Effect with Video</title>
+    <title>Simple Spotlight</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Start Overlay -->
-    <div id="startOverlay">
-        <button id="startBtn">🎬 Click to Start with Sound</button>
-    </div>
-    
-    <!-- Video -->
-    <video id="bgVideo" loop>
+    <video id="myVideo" autoplay muted loop>
         <source src="videoplayback.mp4" type="video/mp4">
     </video>
     
-    <!-- Spotlight -->
     <div class="spotlight"></div>
     
-    <!-- Controls -->
-    <div class="controls">
-        <button id="soundBtn">🔊 Mute</button>
-        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
-    </div>
+    <button id="soundBtn">🔇 Unmute</button>
     
     <script src="script.js"></script>
 </body>
